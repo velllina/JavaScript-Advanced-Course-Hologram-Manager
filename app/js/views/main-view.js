@@ -2,21 +2,11 @@
 
 var app = app || {};
 
-(function (global){
+(function(Global) {
 
-	var view = {
-
-		init: function(option){
-			this.template = app.templates.main;
-			this.name = 'baseView';
-			this.placeholder = document.getElementById("content"); 
-
-			this.render();
-		},
-
-		render: function(){
-			this.placeholder.innerHTML = this.template; 
-		}
-	};
+    app.views.mainView = {
+        name: 'main'
+    };
+    _.extend(app.views.mainView, Global.GenericView);
 
 })(window);
