@@ -5,20 +5,26 @@
 (function(Global) {
 
     Global.GenericView = {
-        init: function() {
+
+        initialize: function() {
             this.template = Templates[this.name];
             this.placeholder = document.getElementById(this.name + '-wrapper');
 
-            this.render();
+            this.init();
         },
 
+        onRender: function() {},
+
         render: function() {
-            this.placeholder.innerHTML = this.template;
+            this.placeholder.innerHTML = this.template();
+            this.onRender();
         },
 
         destroy: function() {
             console.info('Destroyed: ' + this.name);
         }
-    }
+    };
+
+    Global.GenericView = _.extendOwn(Global.GenericView, Global.Initable);
 
 })(window);

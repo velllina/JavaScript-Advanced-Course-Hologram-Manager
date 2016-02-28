@@ -4,14 +4,14 @@
     <title>Codicamp Hologram Manager</title>
 
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    
+
     <% _.each(scripts, function(script){ %>
         <script type="text/javascript" src="<%= script %>"></script>
     <% }) %>
 </head>
 <body>
 
-    <div id="content"></div>
+    <div id="main-wrapper"></div>
 
     <script type="text/javascript" src="app/app.js"></script>
 </body>
