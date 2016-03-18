@@ -1,0 +1,36 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+    exclude_fingerprints:
+      - 0ef8b864f12a4be5203241ebd995122a
+      - c5fcb6214e4424634eb97620e464e95c
+      - 1fe3617134d14e530a225511897d7b3a
+  eslint:
+    enabled: true
+    checks:
+      complexity:
+        enabled: false
+      wrap-iife:
+        enabled: false
+  fixme:
+    enabled: false
+ratings:
+  paths:
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths:
+  - build/**/*
+  - design/**/*
+  - wire/**/*
+  - app/js/vendor/**/*
+  - "app/js/components/ajaxRequest.js"
+  - hologram-UI/**/*
